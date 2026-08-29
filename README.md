@@ -1,108 +1,138 @@
-# AI Contract Reviewer (AICR)
+<p align="center">
+  <img src="assets/aicr-system-terminal.svg" alt="AICR system profile showing private, human-led contract review with source-linked evidence and human decision authority" />
+</p>
 
-AI-powered contract analysis and risk detection platform designed to help operators, founders, and analysts make better decisions before signing agreements.
+# AICR | AI Contract Reviewer
 
----
+**Private, human-led contract review with evidence-linked findings, visible uncertainty, and governed decision support.**
 
-## Executive Summary
+AICR helps people review contracts by surfacing potential concerns, connecting findings to supporting contract language, and organizing the evidence that deserves closer attention. The software supports the review process. The human reviewer interprets the language, weighs the context, and makes the decision.
 
-Most contracts are signed without a full understanding of the risks involved.
+This public repository documents selected product capabilities and screenshots. The core implementation remains private.
 
-The AI Contract Reviewer (AICR) transforms unstructured contract documents into structured insights, highlights critical risks, and enables side-by-side comparison for better decision-making.
+## What AICR Does
 
-Instead of simply summarizing documents, AICR focuses on risk detection, explainability, and decision support.
+AICR turns contract review into a structured evidence workflow:
 
----
+**Contract → Finding → Supporting Language → Context / Uncertainty → Human Review**
 
-## Problem
+The system is designed to help a reviewer:
 
-Contracts often contain hidden risks that are easy to overlook:
+- surface potential concerns and missing protections
+- extract important contractual terms
+- connect findings to supporting source language
+- inspect surrounding contract context
+- compare agreements and changed terms
+- expose when supporting evidence was not detected
+- keep consequential judgment with a human reviewer
 
-- Missing liability caps  
-- Undefined intellectual property ownership  
-- Weak indemnification clauses  
-- Unclear payment terms  
-- Auto-renewal traps  
+## Why This Matters
 
----
+Contract review is often an attention problem. Important language can be buried across long agreements, related terms can appear in different sections, and missing protections are easy to overlook when time is limited.
 
-## Solution
+AICR is designed to direct attention toward the language that may deserve closer review without pretending the system has final authority.
 
-AICR provides a structured analysis pipeline that:
+## Evidence and Human Review
 
-- Extracts key contractual fields  
-- Identifies missing or risky clauses  
-- Assigns risk severity (Critical, Warning)  
-- Explains why each issue matters  
-- Enables contract-to-contract comparison  
+AICR is built around evidence before confidence.
 
----
+When the system surfaces a finding, the reviewer should be able to inspect the contract language connected to that finding rather than rely on an unsupported conclusion. Where relevant source language is not detected, the workflow should make that limitation visible instead of presenting certainty that the evidence does not support.
 
-## Key Features
+AICR does not replace interpretation, negotiation, professional judgment, or legal advice. The human remains responsible for the final decision.
 
-### Contract Analysis
-- Upload PDF or TXT contracts
-- Automatic field extraction
-- Structured output for key terms
+## Core Capabilities
 
-### Risk Detection Engine
-- Flags critical and moderate risks
-- Highlights missing clauses
-- Provides human-readable explanations
+### Contract Review
+- structured review of uploaded contract documents
+- extraction of key contractual fields and terms
+- findings organized for human review
 
-### Explainability Layer
-- Displays supporting evidence from the contract
-- Links extracted insights to source text
+### Finding and Evidence Workflow
+- potential concerns and missing protections surfaced for review
+- supporting contract language displayed with findings
+- surrounding clause context available to the reviewer
+- visible "not detected" or missing-evidence states where appropriate
 
 ### Contract Comparison
-- Side-by-side contract analysis
-- Identifies changed and unchanged fields
-- Highlights unique risks per contract
-- Provides a clear decision verdict
+- side-by-side comparison of agreements
+- changed and unchanged fields surfaced clearly
+- contract-specific findings organized for review
 
----
+### Reporting and Review Support
+- structured outputs designed to reduce manual review friction
+- evidence-first presentation that supports verification before reliance
+- human-led workflow rather than autonomous decision-making
 
-## Sample Outputs
+## Privacy and Governance
+
+AICR is designed around a local-first, privacy-conscious operating model for sensitive contract workflows.
+
+The product direction emphasizes:
+
+- private review of sensitive documents
+- human approval and human judgment
+- evidence-linked findings
+- visible uncertainty and detection limits
+- controlled usage and governance boundaries
+- verification before reliance
+
+The goal is not to make AI sound certain. The goal is to make the review process clearer, more inspectable, and easier for a person to verify.
+
+## Product Screenshots
+
+The screenshots below show an earlier documented version of AICR. Updated product images and an evolution walkthrough will be added as the current interface is documented.
 
 ### Contract Upload Interface
-![Upload Interface](assets/01-upload-interface.png)
+![Contract Upload Interface](assets/01-upload-interface.png)
 
 ### Contract Analysis Overview
-![Analysis Overview](assets/02-contract-analysis-overview.png)
+![Contract Analysis Overview](assets/02-contract-analysis-overview.png)
 
-### Risk Detection (Critical & Warnings)
-![Risk Detection](assets/03-risk-detection.png)
+### Findings and Risk Review
+![Findings and Risk Review](assets/03-risk-detection.png)
 
-### Supporting Evidence (Explainability)
-![Supporting Evidence](assets/04-supporting-evidence.png)
+### Supporting Contract Evidence
+![Supporting Contract Evidence](assets/04-supporting-evidence.png)
 
 ### Contract Comparison Summary
-![Comparison Summary](assets/05-contract-comparison-summary.png)
+![Contract Comparison Summary](assets/05-contract-comparison-summary.png)
 
 ### Contract Comparison Details
-![Comparison Details](assets/06-contract-comparison-details.png)
+![Contract Comparison Details](assets/06-contract-comparison-details.png)
 
----
+## High-Level Architecture
 
-## System Architecture (High-Level)
+At a high level, AICR separates the review workflow into distinct responsibilities:
 
-1. Ingestion Layer  
-2. Processing Layer  
-3. Risk Engine  
-4. Explainability Layer  
-5. Comparison Engine  
+1. **Document Ingestion**
+2. **Contract Processing and Extraction**
+3. **Finding Detection**
+4. **Evidence and Context Presentation**
+5. **Contract Comparison**
+6. **Human Review**
 
----
+This public description intentionally stays at the product-architecture level. Internal implementation details are not published in this repository.
 
-## Business Impact
+## What AICR Does Not Do
 
-- Reduce legal and financial risk  
-- Identify missing protections before signing  
-- Compare vendor agreements with clarity  
-- Save time reviewing contracts manually  
+AICR is not presented as an attorney, an autonomous legal decision-maker, or a guarantee that every issue in a contract will be detected.
 
----
+It does not remove the need to verify source language, consider business context, or seek qualified professional advice when appropriate.
+
+## Current Product Direction
+
+AICR is being developed as part of **AI Arsenal**, a portfolio of practical AI and data systems built around evidence, privacy, governance, and human judgment.
+
+Current product work focuses on making contract review more structured, inspectable, and useful without removing human accountability from the workflow.
+
+## Explore AI Arsenal
+
+- [AI Arsenal Portfolio](https://sophos333.github.io/OscarAIArsenal/)
+- [Oscar Holguin-Silva on GitHub](https://github.com/Sophos333)
+- [LinkedIn](https://www.linkedin.com/in/yashuasspear-oscar-holguin-silva/)
 
 ## Disclaimer
 
-This repository showcases capabilities only. Core implementation is not included.
+This repository showcases selected AICR capabilities and product direction only. Core implementation is not included.
+
+AICR provides review support and decision support. It does not provide legal advice and should not be treated as a substitute for qualified professional review when that is required.
